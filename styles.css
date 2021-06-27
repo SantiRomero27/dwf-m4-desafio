@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.upper-container {
+    background-image: url(./assets/exampleImage.png);
+    background-size: cover;
+    background-position: 45% 55%;
+}
+
+/* HEADER COMPONENT */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 20px 35px;
+    }
+}
+
+.header__logo {
+    width: 100px;
+    height: 40px;
+}
+
+.header__burger {
+    align-self: flex-end;
+
+    width: 36px;
+    height: 32px;
+}
+
+@media (min-width: 768px) {
+    .header__burger {
+        display: none;
+    }
+}
+
+.header__desktop-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header__desktop-nav {
+        display: flex;
+    }
+}
+
+.header__desktop-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header__desktop-nav-link:nth-child(2) {
+    margin: 0 50px;
+}
+
+.burger-window {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+
+    background-color: #0f0f0f;
+    opacity: 0.98;
+}
+
+.burger-window__close {
+    align-self: flex-end;
+}
+
+.burger-window__navigation {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.burger-window__link {
+    color: white;
+    text-decoration: none;
+    font-size: 48px;
+}
+
+.burger-window__link:not(:last-of-type) {
+    margin-bottom: 35px;
+}
+
+/* Welcome section */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 545px;
+    color: white;
+}
+
+.title {
+    margin: 0;
+
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.welcome__title {
+    text-align: center;
+    font-size: 54px;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.welcome__title:last-of-type {
+    font-size: 36px;
+}
+
+/* Info section */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 75px 35px;
+    background-color: #141414;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .info {
+        flex-direction: row;
+        justify-content: center;
+
+        padding: 0;
+
+        background-color: initial;
+        color: #2c2c2c;
+    }
+}
+
+.info__image {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .info__image {
+        display: initial;
+        align-self: flex-end;
+
+        height: 400px;
+        width: 300px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+}
+
+.info__title {
+    margin-bottom: 45px;
+
+    font-size: 36px;
+}
+
+.info__article {
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .info__title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}
+
+.text {
+    font-family: "Poppins";
+}
+
+.info__text {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+/* Services section */
+.services {
+    padding: 70px 0;
+
+    background-color: #e9e9e9;
+}
+
+.services__title {
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.services__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    margin: 0 auto;
+    max-width: 275px;
+}
+
+@media (min-width: 960px) {
+    .services__container {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        width: 85%;
+        max-width: 1000px;
+    }
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 325px;
+    width: 100%;
+    padding: 10px;
+
+    background-color: #f5f4f4;
+    border-radius: 5px;
+    box-shadow: 1px 2px 15px -7px rgba(0, 0, 0, 0.4);
+}
+
+.services-card__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 150px;
+    border-radius: 3px 3px 1px 1px;
+}
+
+.services-card__article {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.services-card__title {
+    font-size: 22px;
+}
+
+.services-card__text {
+    margin: 0;
+    margin-top: 7px;
+    overflow: auto;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Contact Section and COMPONENT */
+.contact {
+    padding: 70px 0;
+    background-color: #141414;
+}
+
+.contact__content {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    width: 85%;
+    max-width: 325px;
+
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .contact__content {
+        flex-direction: row;
+
+        max-width: 650px;
+    }
+}
+
+.contact__content-title {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+@media (min-width: 768px) {
+    .contact__content-title {
+        margin-bottom: 0;
+        margin-right: 70px;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.contact-form__label,
+.contact-form__input,
+.contact-form__textarea {
+    font-family: "Poppins";
+}
+
+.contact-form__input,
+.contact-form__textarea,
+.contact-form__button {
+    width: 100%;
+}
+
+.contact-form__label {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.contact-form__input {
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 3.5px;
+}
+
+.contact-form__textarea {
+    height: 110px;
+    margin-bottom: 50px;
+    padding: 5px;
+}
+
+.contact-form__button {
+    padding: 15px 0;
+
+    border-radius: 5px;
+    border-style: none;
+    background-color: #2c2c2c;
+    color: white;
+    font-size: 16px;
+    font-family: "Montserrat";
+}
+
+.contact-form__button:hover {
+    cursor: pointer;
+}
+
+/* Footer COMPONENT */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 85px;
+
+    background-color: #2c2c2c;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer > a {
+    margin-bottom: 35px;
+}
+
+@media (min-width: 768px) {
+    .footer > a {
+        margin-bottom: 0;
+    }
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.footer__container-link {
+    display: flex;
+
+    text-decoration: none;
+}
+
+.footer__container-link-image {
+    margin-right: 5px;
+}
+
+.footer__container-link-title {
+    justify-self: center;
+
+    font-size: 13px;
+    font-family: "Poppins";
+    text-decoration: none;
+    color: white;
+}

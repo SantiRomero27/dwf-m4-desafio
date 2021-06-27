@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <title>Portfolio | Santi Romero</title>
+
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./styles.css" />
+
+        <!-- JS -->
+        <script defer src="./src/index.js"></script>
+    </head>
+    <body>
+        <div class="upper-container">
+            <!-- Header COMPONENT -->
+            <header class="header">
+                <a href="./index.html"
+                    ><img src="./assets/SantiLogo.png" class="header__logo"
+                /></a>
+                <img src="./assets/burger.svg" class="header__burger" />
+                <nav class="header__desktop-nav">
+                    <a href="./index.html" class="text header__desktop-nav-link"
+                        >Portfolio</a
+                    >
+                    <a href="./index.html" class="text header__desktop-nav-link"
+                        >Servicios</a
+                    >
+                    <a href="./index.html" class="text header__desktop-nav-link"
+                        >Contacto</a
+                    >
+                </nav>
+
+                <!-- Burger Window -->
+                <div class="burger-window">
+                    <img
+                        src="./assets/cross.svg"
+                        class="burger-window__close"
+                    />
+                    <nav class="burger-window__navigation">
+                        <a href="./index.html" class="title burger-window__link"
+                            >Portfolio</a
+                        >
+                        <a href="./index.html" class="title burger-window__link"
+                            >Servicios</a
+                        >
+                        <a href="./index.html" class="title burger-window__link"
+                            >Contacto</a
+                        >
+                    </nav>
+                </div>
+            </header>
+
+            <!-- Welcome section -->
+            <section class="welcome">
+                <h2 class="title welcome__title">Hola</h2>
+                <h2 class="title welcome__title">Soy Santi</h2>
+            </section>
+        </div>
+
+        <!-- My info section -->
+        <section class="info">
+            <img src="./assets/persona.png" class="info__image" />
+            <article class="info__article">
+                <h2 class="title info__title">Soy Santi</h2>
+                <p class="text info__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Cupiditate tempora commodi vero quo, eaque vitae
+                    voluptatibus beatae totam adipisci delectus amet ducimus
+                    incidunt alias corrupti quia possimus maiores odit unde?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </article>
+        </section>
+
+        <!-- Services section -->
+        <section class="services">
+            <h2 class="title services__title">Mis servicios</h2>
+            <div class="services__container">
+                <!-- TEMPLATE -->
+                <div class="services-card">
+                    <img
+                        src="https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/FWB2EJXNX5HHTBZPJ5WSPCKG34.jpg"
+                        class="services-card__image"
+                    />
+                    <article class="services-card__article">
+                        <h3 class="title services-card__title">
+                            Hago estas cositas
+                        </h3>
+                        <p class="text services-card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perferendis, iste? Odio eaque repellat
+                            deleniti tempora non. Iusto, incidunt? Culpa, hic
+                            recusandae incidunt cumque libero necessitatibus. Id
+                            quaerat quam ab quod!
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <!-- Contact COMPONENT -->
+            <div class="contact__content">
+                <h2 class="title contact__content-title">Escribime</h2>
+                <form class="contact-form">
+                    <label for="name" class="contact-form__label">Nombre</label>
+                    <input
+                        type="text"
+                        class="contact-form__input"
+                        id="name"
+                        name="name"
+                    />
+                    <label for="email" class="contact-form__label">Email</label>
+                    <input
+                        type="email"
+                        class="contact-form__input"
+                        id="email"
+                        name="email"
+                    />
+                    <label for="message" class="contact-form__label"
+                        >Mensaje</label
+                    >
+                    <textarea
+                        name="message"
+                        class="contact-form__textarea"
+                        id="message"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                    <button class="contact-form__button">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer COMPONENT -->
+        <section class="footer">
+            <a href="./index.html">
+                <img src="./assets/SantiLogo.png" class="footer__logo" />
+            </a>
+            <div class="footer__container">
+                <a
+                    href="https://www.instagram.com/santiromero_27/"
+                    class="footer__container-link"
+                    target="_blank"
+                >
+                    <img
+                        src="./assets/instagram.svg"
+                        class="footer__container-link-image"
+                    />
+                    <span class="footer__container-link-title">Instagram</span>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/santiago-romero-gherdina-6a92071b3/"
+                    class="footer__container-link"
+                    target="_blank"
+                >
+                    <img
+                        src="./assets/LinkedinLogo.svg"
+                        class="footer__container-link-image"
+                    />
+                    <span class="footer__container-link-title">Linkedin</span>
+                </a>
+                <a
+                    href="https://github.com/SantiRomero27"
+                    class="footer__container-link"
+                    target="_blank"
+                >
+                    <img
+                        src="./assets/GithubLogo.svg"
+                        class="footer__container-link-image"
+                    />
+                    <span class="footer__container-link-title">Github</span>
+                </a>
+            </div>
+        </section>
+    </body>
+</html>
