@@ -43,7 +43,17 @@ function sendMail(contactEl) {
             }),
         })
             // Solve the promise
-            .then(() => alert("El mensaje fue enviado con éxito!"))
+            .then(() => {
+                alert("El mensaje fue enviado con éxito!");
+
+                // Clear all form fields
+                contactEl
+                    .querySelectorAll(".contact-form__input")
+                    .forEach((input) => {
+                        input.value = "";
+                    });
+                contactEl.querySelector(".contact-form__textarea").value = "";
+            })
             .catch(() => {
                 alert("Algo salió mal al enviar el mensaje...");
             });
