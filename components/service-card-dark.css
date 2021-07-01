@@ -6,10 +6,10 @@
     width: 100%;
     padding: 10px;
 
-    background-color: #1a1818;
+    background-color: #242222;
     color: white;
     border-radius: 5px;
-    box-shadow: inset 1px 2px 15px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 2px 15px -5px rgba(0, 0, 0, 1);
 }
 
 .services-card__image {
