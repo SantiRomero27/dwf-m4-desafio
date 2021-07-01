@@ -46,7 +46,7 @@ function getInfoContent(infoSection) {
 }
 
 // Function to get the image URL of a service
-function getServiceImageUrl(imageId, assetArray) {
+function getImageUrl(imageId, assetArray) {
     // Get the image ID that matches with the service ID
     const result = assetArray.find((item) => item.sys.id == imageId);
 
@@ -68,16 +68,13 @@ function processServices(data, parentEl) {
         // Get all data from the item
         let title = item.fields.serviceTitle;
         let description = item.fields.serviceDescription;
-        let imageUrl = getServiceImageUrl(
-            item.fields.serviceImage.sys.id,
-            assets
-        );
+        let imageUrl = getImageUrl(item.fields.serviceImage.sys.id, assets);
 
         // Give properties to the card element
         cardEl.innerHTML = `<img class="services-card__image" />
         <article class="services-card__article">
-            <h3 class="title services-card__title">${title}</h3>
-            <p class="text services-card__text">${description}</p>
+            <h3 class="services-card__title">${title}</h3>
+            <p class="services-card__text">${description}</p>
         </article>`;
 
         // Set the src attribute for the img tag
@@ -98,4 +95,55 @@ function getServices(parentEl) {
     )
         .then((resp) => resp.json())
         .then((data) => processServices(data, parentEl));
+}
+
+// Function to process the portfolio content
+function processPortfolio(data, parentEl) {
+    // Get all the items, and the assets
+    const items = data.items.reverse();
+    const assets = data.includes.Asset;
+
+    // Iterate all the items, and create the portfolio cards
+    items.forEach((item) => {
+        // Create the card
+        let cardEl = document.createElement("div");
+        cardEl.setAttribute("class", "portfolio-card");
+
+        // Get all item data
+        let title = item.fields.portfolioTitle;
+        let description = item.fields.portfolioDescription;
+        let link = item.fields.portfolioLink;
+
+        // Get the image URL
+        let imageUrl = getImageUrl(item.fields.portfolioImage.sys.id, assets);
+
+        // Give properties to the portfolio card
+        cardEl.innerHTML = `<img class="portfolio-card__image" />
+        <article class="portfolio-card__article">
+            <h3 class="portfolio-card__title">${title}</h3>
+            <p class="portfolio-card__description">${description}</p>
+            <a class="portfolio-card__link" target="_blank">Ver más</a>
+        </article>`;
+
+        // Give the remaining attributes
+        cardEl
+            .querySelector(".portfolio-card__image")
+            .setAttribute("src", imageUrl);
+        cardEl
+            .querySelector(".portfolio-card__link")
+            .setAttribute("href", link);
+
+        // Append the portfolio card
+        parentEl.appendChild(cardEl);
+    });
+}
+
+// Function to get the portfolio content
+function getPortfolio(parentEl) {
+    // API Fetch
+    fetch(
+        "https://cdn.contentful.com/spaces/9635uuvwn9dq/environments/master/entries?access_token=cgtQv23ag7qZw92QlPnJwslq6vWfK8sDwB8fNk62QTI&content_type=portfolio"
+    )
+        .then((res) => res.json())
+        .then((data) => processPortfolio(data, parentEl));
 }

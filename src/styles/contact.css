@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.upper-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(14, 13, 13);
+}
+
+@media (min-width: 768px) {
+    .upper-container {
+        background-color: unset;
+        background-image: linear-gradient(to right, #283c86, #45a247);
+        background-size: 300%;
+        animation: gradient-animation 20s infinite alternate;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+
+    min-height: 650px;
+}
+
+@media (min-width: 768px) {
+    .contact-section {
+        min-height: 575px;
+    }
+}
+
+/* Acá está el problema */
+.contact-content__title {
+    font-size: 48px !important;
+}

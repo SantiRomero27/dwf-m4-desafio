@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(14, 13, 13);
+}
+
+.upper-container {
+    background-color: inherit;
+}
+
+@media (min-width: 768px) {
+    .upper-container {
+        background-color: unset;
+        background-image: linear-gradient(to right, #7b4397, #dc2430);
+        background-size: 300%;
+        animation: gradient-animation 20s infinite alternate;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-height: 125px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .intro-section {
+        justify-content: center;
+
+        padding: 0 45px;
+        min-height: 450px;
+    }
+}
+
+.intro-section__title {
+    margin: 0;
+    font-size: 48px;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .intro-section__title {
+        font-size: 52px;
+        text-align: left;
+        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.portfolio-section {
+    padding: 55px 0 75px;
+    background-color: inherit;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .portfolio-section {
+        padding: 85px 45px;
+    }
+}
+
+.portfolio-section__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    margin: 0 auto;
+    max-width: 275px;
+}
+
+@media (min-width: 768px) {
+    .portfolio-section__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        width: 100%;
+        max-width: unset;
+    }
+}

@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.upper-container {
+    background-size: cover;
+    background-position: 45% 55%;
+}
+
+/* Welcome section */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 545px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .welcome {
+        min-height: 570px;
+    }
+}
+
+.title {
+    margin: 0;
+
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.welcome__title {
+    font-size: 54px;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.welcome__title:last-of-type {
+    font-size: 36px;
+}
+
+/* Info section */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 75px 35px;
+    background-color: #141414;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .info {
+        flex-direction: row;
+        justify-content: center;
+
+        padding: 0;
+
+        background-color: initial;
+        color: #2c2c2c;
+    }
+}
+
+.info__image {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .info__image {
+        display: initial;
+        align-self: flex-end;
+
+        height: 400px;
+        width: 300px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+}
+
+.info__title {
+    margin-bottom: 45px;
+
+    font-size: 36px;
+}
+
+.info__article {
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .info__title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}
+
+.text {
+    font-family: "Poppins";
+}
+
+.info__text {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+/* Services section */
+.services {
+    padding: 70px 0;
+
+    background-color: #e9e9e9;
+}
+
+.services__title {
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.services__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    margin: 0 auto;
+    max-width: 275px;
+}
+
+@media (min-width: 960px) {
+    .services__container {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        width: 85%;
+        max-width: 1100px;
+    }
+}
+
+/* Contact Section and COMPONENT */
+.contact {
+    padding: 70px 0;
+    background-color: #141414;
+}

@@ -11,68 +11,22 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap"
             rel="stylesheet"
         />
-        <title>Portfolio | Santi Romero</title>
+        <title>Home | Santi Romero</title>
 
         <!-- STYLES -->
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./components/header.css" />
+        <link rel="stylesheet" href="./components/service-card-light.css" />
+        <link rel="stylesheet" href="./components/contact-form.css" />
+        <link rel="stylesheet" href="./components/footer.css" />
+        <link rel="stylesheet" href="./src/styles/index.css" />
 
         <!-- JS -->
-        <script defer src="./src/modal.js"></script>
-        <script defer src="./src/content.js"></script>
-        <script defer src="./src/index.js"></script>
+        <script defer src="./src/js/components.js"></script>
+        <script defer src="./src/js/content.js"></script>
+        <script defer src="./src/js/index.js"></script>
     </head>
     <body>
         <div class="upper-container">
-            <!-- Header COMPONENT -->
-            <header class="header">
-                <a href="./index.html"
-                    ><img src="./assets/SantiLogo.png" class="header__logo"
-                /></a>
-                <img src="./assets/burger.svg" class="header__burger" />
-                <nav class="header__desktop-nav">
-                    <a
-                        href="./portfolio.html"
-                        class="text header__desktop-nav-link"
-                        >Portfolio</a
-                    >
-                    <a
-                        href="./services.html"
-                        class="text header__desktop-nav-link"
-                        >Servicios</a
-                    >
-                    <a
-                        href="./contact.html"
-                        class="text header__desktop-nav-link"
-                        >Contacto</a
-                    >
-                </nav>
-
-                <!-- Burger Window -->
-                <div class="burger-window">
-                    <img
-                        src="./assets/cross.svg"
-                        class="burger-window__close"
-                    />
-                    <nav class="burger-window__navigation">
-                        <a
-                            href="./portfolio.html"
-                            class="title burger-window__link"
-                            >Portfolio</a
-                        >
-                        <a
-                            href="./services.html"
-                            class="title burger-window__link"
-                            >Servicios</a
-                        >
-                        <a
-                            href="./contact.html"
-                            class="title burger-window__link"
-                            >Contacto</a
-                        >
-                    </nav>
-                </div>
-            </header>
-
             <!-- Welcome section -->
             <section class="welcome">
                 <h2 class="title welcome__title"></h2>
@@ -96,80 +50,6 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact">
-            <!-- Contact COMPONENT -->
-            <div class="contact__content">
-                <h2 class="title contact__content-title">Escribime</h2>
-                <form class="contact-form">
-                    <label for="name" class="contact-form__label">Nombre</label>
-                    <input
-                        type="text"
-                        class="contact-form__input"
-                        id="name"
-                        name="name"
-                    />
-                    <label for="email" class="contact-form__label">Email</label>
-                    <input
-                        type="email"
-                        class="contact-form__input"
-                        id="email"
-                        name="email"
-                    />
-                    <label for="message" class="contact-form__label"
-                        >Mensaje</label
-                    >
-                    <textarea
-                        name="message"
-                        class="contact-form__textarea"
-                        id="message"
-                        cols="30"
-                        rows="10"
-                    ></textarea>
-                    <button class="contact-form__button">Enviar</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Footer COMPONENT -->
-        <section class="footer">
-            <a href="./index.html">
-                <img src="./assets/SantiLogo.png" class="footer__logo" />
-            </a>
-            <div class="footer__container">
-                <a
-                    href="https://www.instagram.com/santiromero_27/"
-                    class="footer__container-link"
-                    target="_blank"
-                >
-                    <img
-                        src="./assets/instagram.svg"
-                        class="footer__container-link-image"
-                    />
-                    <span class="footer__container-link-title">Instagram</span>
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/santiago-romero-gherdina-6a92071b3/"
-                    class="footer__container-link"
-                    target="_blank"
-                >
-                    <img
-                        src="./assets/LinkedinLogo.svg"
-                        class="footer__container-link-image"
-                    />
-                    <span class="footer__container-link-title">Linkedin</span>
-                </a>
-                <a
-                    href="https://github.com/SantiRomero27"
-                    class="footer__container-link"
-                    target="_blank"
-                >
-                    <img
-                        src="./assets/GithubLogo.svg"
-                        class="footer__container-link-image"
-                    />
-                    <span class="footer__container-link-title">Github</span>
-                </a>
-            </div>
-        </section>
+        <section class="contact"></section>
     </body>
 </html>

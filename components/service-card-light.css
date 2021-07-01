@@ -1,0 +1,45 @@
+.services-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 325px;
+    width: 100%;
+    padding: 10px;
+
+    background-color: #f5f4f4;
+    border-radius: 5px;
+    box-shadow: 1px 2px 15px -7px rgba(0, 0, 0, 0.4);
+}
+
+.services-card__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 150px;
+    border-radius: 3px 3px 1px 1px;
+}
+
+.services-card__article {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.services-card__title {
+    margin: 0;
+    font-size: 22px;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.services-card__text {
+    margin: 0;
+    margin-top: 7px;
+    overflow: auto;
+
+    font-size: 16px;
+    font-family: "Poppins";
+    text-align: center;
+}

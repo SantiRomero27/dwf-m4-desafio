@@ -1,0 +1,55 @@
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 350px;
+    width: 100%;
+
+    background-color: #1a1818;
+    border-radius: 6.5px;
+    box-shadow: inset 0px 0px 15px -7px rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-card__image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    min-height: 150px;
+    height: 150px;
+    border-radius: 6.5px 6.5px 0 0;
+}
+
+.portfolio-card__article {
+    display: grid;
+    grid-template: 1fr 4fr 1fr / 1fr;
+
+    padding: 10px;
+    overflow: auto;
+    text-align: center;
+}
+
+.portfolio-card__title {
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 24px;
+}
+
+.portfolio-card__description {
+    margin: 0;
+    margin-top: 8.5px;
+
+    font-family: "Poppins";
+    font-size: 16px;
+    overflow: auto;
+}
+
+.portfolio-card__link {
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    margin-top: 7.5px;
+    font-family: "Montserrat";
+    font-size: 18px;
+    text-decoration: none;
+    color: #fc6f50;
+}
